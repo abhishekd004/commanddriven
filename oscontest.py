@@ -13,7 +13,8 @@ while True:
     c = input("\nHow i can help u \nplease enter : ")
     if ("don't" in c) or ("dont" in c) or ('do not' in c):
         p.speak("OK \n What i can do for u")
-        c=input("ok,what I can do for u,\nEnter :")
+        pass
+        #c=input("ok,what I can do for u,\nEnter :")
     elif ("exit" == c) or ("close" == c) or ("quit" ==c) or ("bye" == c):
         print("~~~~~~~~~~~~~~~ THANKS ~~~~~~~~~~~~~~~~")
         p.speak("thanks,for coming \n bye")
@@ -187,10 +188,13 @@ while True:
                     print("Great, you win")
                     p.speak("Great, you win")
                     break
-                else:
-                    n-=1
+                elif n >1:
                     p.speak("wrong guess, try again")
                     print("Wrong Guess\nTry Again")
+                else:
+                    print("Better Luck Next Time")
+                    p.speak("Better Luck Next Time")
+                n-=1      
         elif ("2" in a) or ("shape" in a):
             for i in range(11):
                 for j in range(11-i):
